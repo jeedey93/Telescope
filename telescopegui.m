@@ -22,7 +22,7 @@ function varargout = telescopegui(varargin)
 
 % Edit the above text to modify the response to help telescopegui
 
-% Last Modified by GUIDE v2.5 03-Apr-2016 21:54:54
+% Last Modified by GUIDE v2.5 04-Apr-2016 19:46:12
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -157,3 +157,141 @@ end
 
 
 toc(time);
+
+
+
+function x_coordinate_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to x_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of x_coordinate_edittext as text
+%        str2double(get(hObject,'String')) returns contents of x_coordinate_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function x_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to x_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function y_coordinate_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to y_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of y_coordinate_edittext as text
+%        str2double(get(hObject,'String')) returns contents of y_coordinate_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function y_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to y_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function z_coordinate_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to z_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of z_coordinate_edittext as text
+%        str2double(get(hObject,'String')) returns contents of z_coordinate_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function z_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to z_coordinate_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function kp_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to kp_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of kp_edittext as text
+%        str2double(get(hObject,'String')) returns contents of kp_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function kp_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to kp_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function ki_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to ki_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of ki_edittext as text
+%        str2double(get(hObject,'String')) returns contents of ki_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function ki_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to ki_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function kd_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to kd_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of kd_edittext as text
+%        str2double(get(hObject,'String')) returns contents of kd_edittext as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function kd_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to kd_edittext (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end

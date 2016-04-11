@@ -22,7 +22,7 @@ function varargout = telescopegui(varargin)
 
 % Edit the above text to modify the response to help telescopegui
 
-% Last Modified by GUIDE v2.5 04-Apr-2016 19:46:12
+% Last Modified by GUIDE v2.5 10-Apr-2016 21:53:05
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -295,3 +295,23 @@ function kd_edittext_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in usecustomvalues_pushbutton.
+function usecustomvalues_pushbutton_Callback(hObject, eventdata, handles)
+% hObject    handle to usecustomvalues_pushbutton (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+global kp;
+global ki;
+global kd;
+
+open_system('TelescopeModel.slx');
+
+set_param('TelescopeModel/pid_controller_one/p_gain', 'Gain', kp);
+set_param('TelescopeModel/pid_controller_one/i_gain', 'Gain', ki);
+set_param('TelescopeModel/pid_controller_one/d_gain', 'Gain', kd);
+set_param('TelescopeModel/pid_controller_two/p_gain', 'Gain', kp);
+set_param('TelescopeModel/pid_controller_two/i_gain', 'Gain', ki);
+set_param('TelescopeModel/pid_controller_two/d_gain', 'Gain', kd);
+sim('TelescopeModel.slx');

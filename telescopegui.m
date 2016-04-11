@@ -145,18 +145,16 @@ importfile('StarLocations.txt');
 
 open_system('TelescopeModel.slx');
 
-time = tic;
-for i=1:3
+%time = tic;
+for i=1:100
   % set_param('spherical_telescope/r', 'Value', int2str( (pi/180) * (star_locations(i,1)) ));
    set_param('TelescopeModel/providedPhi', 'Value', num2str((pi/180) * star_locations(i,3)));
-   fprintf('providedPhi');
    set_param('TelescopeModel/providedTheta', 'Value', num2str((pi/180) * star_locations(i,2)));
-   fprintf('providedTheta');
    sim('TelescopeModel.slx');
 end
 
 
-toc(time);
+%toc(time);
 
 
 

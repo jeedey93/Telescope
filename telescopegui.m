@@ -306,20 +306,29 @@ global kp;
 global ki;
 global kd;
 
+% x,y,x coordinates
 x = get(handles.x_edittext, 'String');
 y = get(handles.y_edittext, 'String');
 z = get(handles.z_edittext, 'String');
 
-kp = get(handles.kp_edittext, 'String'); 
-ki = get(handles.ki_edittext, 'String');
-kd = get(handles.kd_edittext, 'String');
+%kp = get(handles.kp_edittext, 'String');
+%ki = get(handles.ki_edittext, 'String');
+%kd = get(handles.kd_edittext, 'String');
+
+providedPhi = num2str((pi/180) * x);
+providedTheta = num2str((pi/180) * y);
 
 open_system('TelescopeModel.slx');
 
-set_param('TelescopeModel/PID Controller1/Proportional Gain', 'Gain', kp);
-set_param('TelescopeModel/PID Controller1/Integral Gain', 'Gain', ki);
-set_param('TelescopeModel/PID Controller1/Derivative Gain', 'Gain', kd);
-set_param('TelescopeModel/PID Controller/Proportional Gain', 'Gain', kp);
-set_param('TelescopeModel/PID Controller/Integral Gain', 'Gain', ki);
-set_param('TelescopeModel/PID Controller/Derivative Gain', 'Gain', kd);
+set_param('TelescopeModel/providedPhi', 'Value', providedPhi);
+set_param('TelescopeModel/providedTheta', 'Value', providedTheta);
+   
+%disp(k);
+
+%set_param('TelescopeModel/PID Controller1/Proportional Gain', 'Gain', kp);
+%set_param('TelescopeModel/PID Controller1/Integral Gain', 'Gain', ki);
+%set_param('TelescopeModel/PID Controller1/Derivative Gain', 'Gain', kd);
+%set_param('TelescopeModel/PID Controller/Proportional Gain', 'Gain', kp);
+%set_param('TelescopeModel/PID Controller/Integral Gain', 'Gain', ki);
+%set_param('TelescopeModel/PID Controller/Derivative Gain', 'Gain', kd);
 sim('TelescopeModel.slx');

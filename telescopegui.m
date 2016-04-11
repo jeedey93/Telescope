@@ -308,10 +308,10 @@ global kd;
 
 open_system('TelescopeModel.slx');
 
-set_param('TelescopeModel/pid_controller_one/p_gain', 'Gain', kp);
-set_param('TelescopeModel/pid_controller_one/i_gain', 'Gain', ki);
-set_param('TelescopeModel/pid_controller_one/d_gain', 'Gain', kd);
-set_param('TelescopeModel/pid_controller_two/p_gain', 'Gain', kp);
-set_param('TelescopeModel/pid_controller_two/i_gain', 'Gain', ki);
-set_param('TelescopeModel/pid_controller_two/d_gain', 'Gain', kd);
+set_param('TelescopeModel/PID Controller1/Proportional Gain', 'Gain', kp);
+set_param('TelescopeModel/PID Controller1/Integral Gain', 'Gain', ki);
+set_param('TelescopeModel/PID Controller1/Derivative Gain', 'Gain', kd);
+set_param('TelescopeModel/PID Controller2/Proportional Gain', 'Gain', kp);
+set_param('TelescopeModel/PID Controller2/Integral Gain', 'Gain', ki);
+set_param('TelescopeModel/PID Controller2/Derivative Gain', 'Gain', kd);
 sim('TelescopeModel.slx');

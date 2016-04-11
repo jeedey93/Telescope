@@ -22,7 +22,7 @@ function varargout = telescopegui(varargin)
 
 % Edit the above text to modify the response to help telescopegui
 
-% Last Modified by GUIDE v2.5 10-Apr-2016 21:53:05
+% Last Modified by GUIDE v2.5 11-Apr-2016 00:32:54
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -160,18 +160,18 @@ toc(time);
 
 
 
-function x_coordinate_edittext_Callback(hObject, eventdata, handles)
-% hObject    handle to x_coordinate_edittext (see GCBO)
+function x_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to x_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of x_coordinate_edittext as text
-%        str2double(get(hObject,'String')) returns contents of x_coordinate_edittext as a double
+% Hints: get(hObject,'String') returns contents of x_edittext as text
+%        str2double(get(hObject,'String')) returns contents of x_edittext as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function x_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to x_coordinate_edittext (see GCBO)
+function x_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to x_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -183,18 +183,18 @@ end
 
 
 
-function y_coordinate_edittext_Callback(hObject, eventdata, handles)
-% hObject    handle to y_coordinate_edittext (see GCBO)
+function y_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to y_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of y_coordinate_edittext as text
-%        str2double(get(hObject,'String')) returns contents of y_coordinate_edittext as a double
+% Hints: get(hObject,'String') returns contents of y_edittext as text
+%        str2double(get(hObject,'String')) returns contents of y_edittext as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function y_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to y_coordinate_edittext (see GCBO)
+function y_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to y_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -206,18 +206,18 @@ end
 
 
 
-function z_coordinate_edittext_Callback(hObject, eventdata, handles)
-% hObject    handle to z_coordinate_edittext (see GCBO)
+function z_edittext_Callback(hObject, eventdata, handles)
+% hObject    handle to z_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of z_coordinate_edittext as text
-%        str2double(get(hObject,'String')) returns contents of z_coordinate_edittext as a double
+% Hints: get(hObject,'String') returns contents of z_edittext as text
+%        str2double(get(hObject,'String')) returns contents of z_edittext as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function z_coordinate_edittext_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to z_coordinate_edittext (see GCBO)
+function z_edittext_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to z_edittext (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -305,6 +305,14 @@ function usecustomvalues_pushbutton_Callback(hObject, eventdata, handles)
 global kp;
 global ki;
 global kd;
+
+x = get(handles.x_edittext, 'String');
+y = get(handles.y_edittext, 'String');
+z = get(handles.z_edittext, 'String');
+
+kp = get(handles.kp_edittext, 'String'); 
+ki = get(handles.ki_edittext, 'String');
+kd = get(handles.kd_edittext, 'String');
 
 open_system('TelescopeModel.slx');
 

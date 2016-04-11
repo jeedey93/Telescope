@@ -315,11 +315,13 @@ z = get(handles.z_edittext, 'String');
 
 providedPhi = num2str((pi/180) * x);
 providedTheta = num2str((pi/180) * y);
+pPhi = ['[' providedPhi ']'];
+pTheta = ['[' providedTheta ']'];
 
 open_system('TelescopeModel.slx');
 
-set_param('TelescopeModel/providedPhi', 'Value', providedPhi);
-set_param('TelescopeModel/providedTheta', 'Value', providedTheta);
+set_param('TelescopeModel/providedPhi', 'Value', pPhi);
+set_param('TelescopeModel/providedTheta', 'Value', pTheta);
    
 %disp(k);
 

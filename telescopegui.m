@@ -145,7 +145,7 @@ importfile('StarLocations.txt');
 
 open_system('TelescopeModel.slx');
 
-%time = tic;
+time = tic;
 for i=1:100
   % set_param('spherical_telescope/r', 'Value', int2str( (pi/180) * (star_locations(i,1)) ));
    set_param('TelescopeModel/providedPhi', 'Value', num2str((pi/180) * star_locations(i,3)));
@@ -154,7 +154,7 @@ for i=1:100
 end
 
 
-%toc(time);
+toc(time);
 
 
 

@@ -312,9 +312,12 @@ z = get(handles.z_edittext, 'String');
 %kp = get(handles.kp_edittext, 'String');
 %ki = get(handles.ki_edittext, 'String');
 %kd = get(handles.kd_edittext, 'String');
+xn = str2num(x);
+yn = str2num(y);
+providedPhi = num2str((pi/180) * xn);
+providedTheta = num2str((pi/180) * yn);
 
-providedPhi = num2str((pi/180) * x);
-providedTheta = num2str((pi/180) * y);
+disp(providedPhi);
 pPhi = ['[' providedPhi ']'];
 pTheta = ['[' providedTheta ']'];
 
@@ -322,6 +325,8 @@ open_system('TelescopeModel.slx');
 
 set_param('TelescopeModel/providedPhi', 'Value', pPhi);
 set_param('TelescopeModel/providedTheta', 'Value', pTheta);
+disp(pPhi);
+disp(pTheta);
    
 %disp(k);
 

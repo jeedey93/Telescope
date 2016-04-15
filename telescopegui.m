@@ -165,6 +165,8 @@ function x_edittext_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of x_edittext as text
 %        str2double(get(hObject,'String')) returns contents of x_edittext as a double
+global xValue;
+xValue = get(hObject,'String');
 
 
 % --- Executes during object creation, after setting all properties.
@@ -188,7 +190,8 @@ function y_edittext_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of y_edittext as text
 %        str2double(get(hObject,'String')) returns contents of y_edittext as a double
-
+global yValue;
+yValue = get(hObject,'String');
 
 % --- Executes during object creation, after setting all properties.
 function y_edittext_CreateFcn(hObject, eventdata, handles)
@@ -303,17 +306,19 @@ function usecustomvalues_pushbutton_Callback(hObject, eventdata, handles)
 global kp;
 global ki;
 global kd;
+global xValue;
+global yValue;
 
 % x,y,x coordinates
-x = get(handles.x_edittext, 'String');
-y = get(handles.y_edittext, 'String');
-z = get(handles.z_edittext, 'String');
+%x = get(handles.x_edittext, 'String');
+%y = get(handles.y_edittext, 'String');
+%z = get(handles.z_edittext, 'String');
 
 %kp = get(handles.kp_edittext, 'String');
 %ki = get(handles.ki_edittext, 'String');
 %kd = get(handles.kd_edittext, 'String');
-xn = str2num(x);
-yn = str2num(y);
+xn = str2num(xValue);
+yn = str2num(yValue);
 providedPhi = num2str((pi/180) * xn);
 providedTheta = num2str((pi/180) * yn);
 
